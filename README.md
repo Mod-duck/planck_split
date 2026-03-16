@@ -1,6 +1,7 @@
 # Planck Split
 
 [![Build ZMK firmware](https://github.com/Modulus010/planck_split/actions/workflows/build.yml/badge.svg)](https://github.com/Modulus010/planck_split/actions/workflows/build.yml)
+[![Draw keymap](https://github.com/Modulus010/planck_split/actions/workflows/draw.yml/badge.svg)](https://github.com/Modulus010/planck_split/actions/workflows/draw.yml)
 
 自定义分体 Planck 键盘的 ZMK 固件，基于 nRF52840 自研 PCB。
 
@@ -31,6 +32,12 @@
 | 6 | FUN | Hold Del | F1–F12 |
 
 左上/右上角 `&to` 键可循环切层：BASE → NAV → MOUSE → MEDIA → NUM → SYM → FUN → BASE
+
+### 键位图
+
+> 由 [keymap-drawer](https://github.com/caksoylar/keymap-drawer) 自动生成，修改 keymap 后 push 即更新。
+
+![Planck Split Keymap](keymap-drawer/planck.svg)
 
 ## 构建
 
@@ -92,8 +99,14 @@ west build -s zmk/app -b planck_right//zmk -- -DZMK_CONFIG="$(pwd)/config"
 │       ├── Kconfig.defconfig        # 板级 Kconfig 默认值
 │       ├── Kconfig.planck_left      # 左手 Kconfig
 │       └── Kconfig.planck_right     # 右手 Kconfig
+├── keymap-drawer/                   # 自动生成的键位图
+│   ├── planck.yaml                  # 解析后的 keymap YAML
+│   └── planck.svg                   # 键位布局 SVG
+├── keymap_drawer.config.yaml        # keymap-drawer 配置
 ├── build.yaml                       # 构建矩阵
-└── .github/workflows/build.yml      # CI 工作流
+├── .github/workflows/
+│   ├── build.yml                    # 固件构建 CI
+│   └── draw.yml                     # 键位图生成 CI
 ```
 
 ## 蓝牙
