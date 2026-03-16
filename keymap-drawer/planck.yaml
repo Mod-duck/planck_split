@@ -1,0 +1,345 @@
+layout: {zmk_keyboard: planck}
+layers:
+  base:
+  - {t: fun, h: toggle}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: nav, h: toggle}
+  - CAPS
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: LSHFT}
+  - {t: K, h: LCTRL}
+  - {t: L, h: LALT}
+  - {t: ;, h: LGUI}
+  - ''''
+  - LSHFT
+  - Z
+  - {t: X, h: RALT}
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - {t: ., h: RALT}
+  - /
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - {t: ESC, h: media}
+  - {t: SPACE, h: nav}
+  - {t: TAB, h: mouse}
+  - {t: RET, h: sym}
+  - {t: BSPC, h: num}
+  - {t: DEL, h: fun}
+  - RGUI
+  - RALT
+  - RCTRL
+  nav:
+  - {t: base, h: toggle}
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - AGAIN
+  - PASTE
+  - COPY
+  - CUT
+  - UNDO
+  - {t: mouse, h: toggle}
+  - CAPS
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - '&caps_word'
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ''''
+  - LSHFT
+  - ''
+  - RALT
+  - ''
+  - ''
+  - ''
+  - INS
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - {type: held}
+  - ''
+  - RET
+  - BSPC
+  - DEL
+  - RGUI
+  - RALT
+  - RCTRL
+  mouse:
+  - {t: nav, h: toggle}
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - AGAIN
+  - PASTE
+  - COPY
+  - CUT
+  - UNDO
+  - {t: media, h: toggle}
+  - CAPS
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - ''''
+  - LSHFT
+  - ''
+  - RALT
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''
+  - ''
+  - {type: held}
+  - '&mkp RCLK'
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - RGUI
+  - RALT
+  - RCTRL
+  media:
+  - {t: mouse, h: toggle}
+  - '&sys_reset'
+  - ''
+  - ''
+  - ''
+  - ''
+  - RGB TOG
+  - RGB EFF
+  - RGB HUI
+  - RGB SAI
+  - RGB BRI
+  - {t: num, h: toggle}
+  - CAPS
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - EP TOG
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - ''''
+  - LSHFT
+  - ''
+  - RALT
+  - ''
+  - ''
+  - ''
+  - OUT TOG
+  - BT 0
+  - BT 1
+  - BT 2
+  - BT 3
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - {type: held}
+  - ''
+  - ''
+  - STOP
+  - PP
+  - MUTE
+  - RGUI
+  - RALT
+  - RCTRL
+  num:
+  - {t: media, h: toggle}
+  - '['
+  - '7'
+  - '8'
+  - '9'
+  - ']'
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - {t: sym, h: toggle}
+  - CAPS
+  - ;
+  - '4'
+  - '5'
+  - '6'
+  - '='
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''''
+  - LSHFT
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - ''
+  - ''
+  - ''
+  - RALT
+  - ''
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - .
+  - '0'
+  - '-'
+  - ''
+  - {type: held}
+  - ''
+  - RGUI
+  - RALT
+  - RCTRL
+  sym:
+  - {t: num, h: toggle}
+  - '{'
+  - '&'
+  - '*'
+  - (
+  - '}'
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - {t: fun, h: toggle}
+  - CAPS
+  - ':'
+  - $
+  - '%'
+  - ^
+  - +
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''''
+  - LSHFT
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - ''
+  - ''
+  - ''
+  - RALT
+  - ''
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - (
+  - )
+  - _
+  - {type: held}
+  - ''
+  - ''
+  - RGUI
+  - RALT
+  - RCTRL
+  fun:
+  - {t: sym, h: toggle}
+  - F12
+  - F7
+  - F8
+  - F9
+  - PSCRN
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&sys_reset'
+  - {t: base, h: toggle}
+  - CAPS
+  - F11
+  - F4
+  - F5
+  - F6
+  - SLCK
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''''
+  - LSHFT
+  - F10
+  - F1
+  - F2
+  - F3
+  - PAUSE BREAK
+  - ''
+  - ''
+  - ''
+  - RALT
+  - ''
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - APP
+  - SPC
+  - TAB
+  - ''
+  - ''
+  - {type: held}
+  - RGUI
+  - RALT
+  - RCTRL

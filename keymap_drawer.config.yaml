@@ -1,0 +1,27 @@
+draw_config:
+  split_gap: 2.0
+  n_columns: 1
+  small_pad: 2.0
+  svg_extra_style: |
+    svg.keymap { font-size: 14px; }
+
+parse_config:
+  # 自定义 hold-tap behavior 映射
+  # um = mod hold-tap（类似 &mt）：hold 修饰键, tap 普通键
+  # ul = layer hold-tap（类似 &lt）：hold 切层, tap 普通键
+  zmk_additional_behaviors:
+    um:
+      type: hold-tap
+      hold: [kp]
+      tap: [kp]
+    ul:
+      type: hold-tap
+      hold: [mo]
+      tap: [kp]
+  # BT 选择器宏显示名
+  raw_binding_map:
+    "&u_bt_sel_0": "BT 0"
+    "&u_bt_sel_1": "BT 1"
+    "&u_bt_sel_2": "BT 2"
+    "&u_bt_sel_3": "BT 3"
+    "&u_bt_sel_4": "BT 4"

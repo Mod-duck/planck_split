@@ -1,0 +1,21 @@
+name: Draw keymap
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - config/planck.keymap
+      - config/include/**
+      - keymap_drawer.config.yaml
+
+permissions:
+  contents: write
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    with:
+      keymap_patterns: "config/planck.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      draw_args: "planck:'-n 444444_444444'"
+      amend_commit: true
