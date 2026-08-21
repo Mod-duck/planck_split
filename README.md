@@ -41,13 +41,13 @@
 
 ## 构建
 
-固件通过 GitHub Actions 自动构建，push `config/` 或 `build.yaml` 即触发。
+固件通过 GitHub Actions 自动构建，push `config/`、`build.yaml` 或构建 workflow 即触发。
 
 ### 下载固件
 
 1. Push 代码到仓库
 2. 进入 **Actions** → **Build ZMK firmware**
-3. 下载 artifact（`planck_left` 和 `planck_right` 的 UF2 文件）
+3. 下载 artifact `planck-firmware`，其中包含 `planck_left.uf2` 和 `planck_right.uf2`
 
 ### 本地构建
 
@@ -86,19 +86,18 @@ west build -s zmk/app -b planck_right//zmk -- -DZMK_CONFIG="$(pwd)/config"
 │   │   ├── layers.h                 # 层级定义
 │   │   ├── behaviors.dtsi           # Hold-tap behaviors
 │   │   └── macros.dtsi              # BT 选择器宏
-│   └── boards/modifier_key/planck/  # 板级定义
-│       ├── board.yml                # HWMv2 板级描述
+│   └── boards/yangxing/planck/      # 板级定义（HWMv2 + zmk variant）
+│       ├── board.yml                # Board 元数据（名称/厂商/SoC/变体）
+│       ├── Kconfig.planck_left      # 左手 Kconfig（select SOC/ZMK compat）
+│       ├── Kconfig.planck_right     # 右手 Kconfig
+│       ├── Kconfig.defconfig        # 板级 Kconfig 默认值
 │       ├── board.cmake              # Flash runners
 │       ├── planck.dtsi              # 共享硬件：SoC、矩阵、布局
-│       ├── planck_left_nrf52840_zmk.dts   # 左手 DTS
-│       ├── planck_right_nrf52840_zmk.dts  # 右手 DTS
-│       ├── planck_left_nrf52840_zmk_defconfig  # 左手 defconfig
+│       ├── planck_left_nrf52840_zmk.dts      # 左手 DTS
+│       ├── planck_right_nrf52840_zmk.dts     # 右手 DTS
+│       ├── planck_left_nrf52840_zmk_defconfig # 左手 defconfig
 │       ├── planck_right_nrf52840_zmk_defconfig # 右手 defconfig
-│       ├── leds_left.dtsi           # 左手 PWM LED
-│       ├── leds_right.dtsi          # 右手 PWM LED
-│       ├── Kconfig.defconfig        # 板级 Kconfig 默认值
-│       ├── Kconfig.planck_left      # 左手 Kconfig
-│       └── Kconfig.planck_right     # 右手 Kconfig
+│       └── leds.dtsi                    # PWM LED（左右共用）
 ├── keymap-drawer/                   # 自动生成的键位图
 │   ├── planck.yaml                  # 解析后的 keymap YAML
 │   └── planck.svg                   # 键位布局 SVG

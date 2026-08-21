@@ -1,12 +1,12 @@
 boards:
   - name: planck_left
-    vendor: modifier_key
+    vendor: yangxing
     socs:
       - name: nrf52840
         variants:
           - name: zmk
   - name: planck_right
-    vendor: modifier_key
+    vendor: yangxing
     socs:
       - name: nrf52840
         variants:

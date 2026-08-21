@@ -1,6 +1,6 @@
 {
   "layouts": {
-    "40% 1x2U Space": {
+    "Planck Split 4x12": {
       "layout": [
         { "row": 0, "col":  0, "x":  0, "y": 0, "rx": 6, "ry": 0 },
         { "row": 0, "col":  1, "x":  1, "y": 0, "rx": 6, "ry": 0 },

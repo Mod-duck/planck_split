@@ -1,6 +1,6 @@
 /dts-v1/;
 #include "planck.dtsi"
-#include "leds_right.dtsi"
+#include "leds.dtsi"
 #include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
 
 

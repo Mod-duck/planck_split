@@ -1,5 +1,7 @@
 # Build matrix for ZMK boards
 include:
   - board: planck_left//zmk
+    artifact-name: planck_left
     snippet: zmk-usb-logging
   - board: planck_right//zmk
+    artifact-name: planck_right

@@ -1,0 +1,15 @@
+# west build artifacts
+build/
+
+# west workspace checkout
+modules/
+tools/
+zephyr/
+zmk/
+bootloader/
+
+# local west metadata
+.west/
+
+# VS Code
+.vscode/

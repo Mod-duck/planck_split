@@ -5,7 +5,10 @@ on:
     paths:
       - config/**
       - build.yaml
+      - .github/workflows/build.yml
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      archive_name: planck-firmware
