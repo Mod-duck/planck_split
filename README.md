@@ -52,14 +52,18 @@
 ### 本地构建
 
 ```bash
-west init -l config
+# 在仓库根目录执行；使用独立 workspace，避免 west checkout 与 module 文件冲突。
+REPO_ROOT="$(pwd)"
+mkdir -p /tmp/planck-zmk-workspace
+cd /tmp/planck-zmk-workspace
+west init -l "$REPO_ROOT/config"
 west update
 
 # 左手
-west build -s zmk/app -b planck_left//zmk -- -DZMK_CONFIG="$(pwd)/config"
+west build -s zmk/app -d build/left -b planck_left//zmk -- -DZMK_CONFIG="$REPO_ROOT/config" -DZMK_EXTRA_MODULES="$REPO_ROOT"
 
 # 右手
-west build -s zmk/app -b planck_right//zmk -- -DZMK_CONFIG="$(pwd)/config"
+west build -s zmk/app -d build/right -b planck_right//zmk -- -DZMK_CONFIG="$REPO_ROOT/config" -DZMK_EXTRA_MODULES="$REPO_ROOT"
 ```
 
 ## 刷写
@@ -80,24 +84,26 @@ west build -s zmk/app -b planck_right//zmk -- -DZMK_CONFIG="$(pwd)/config"
 ├── config/
 │   ├── west.yml                     # West manifest
 │   ├── planck.keymap                # 键位映射
-│   ├── planck.conf                  # 用户配置（功能开关）
+│   ├── planck.conf                  # 共享用户配置（功能开关）
+│   ├── planck_left.conf             # 左手应用配置（central/USB/HID）
 │   ├── planck.json                  # Physical layout（编辑器用）
 │   ├── include/
 │   │   ├── layers.h                 # 层级定义
 │   │   ├── behaviors.dtsi           # Hold-tap behaviors
 │   │   └── macros.dtsi              # BT 选择器宏
-│   └── boards/yangxing/planck/      # 板级定义（HWMv2 + zmk variant）
-│       ├── board.yml                # Board 元数据（名称/厂商/SoC/变体）
-│       ├── Kconfig.planck_left      # 左手 Kconfig（select SOC/ZMK compat）
-│       ├── Kconfig.planck_right     # 右手 Kconfig
-│       ├── Kconfig.defconfig        # 板级 Kconfig 默认值
-│       ├── board.cmake              # Flash runners
-│       ├── planck.dtsi              # 共享硬件：SoC、矩阵、布局
-│       ├── planck_left_nrf52840_zmk.dts      # 左手 DTS
-│       ├── planck_right_nrf52840_zmk.dts     # 右手 DTS
-│       ├── planck_left_nrf52840_zmk_defconfig # 左手 defconfig
-│       ├── planck_right_nrf52840_zmk_defconfig # 右手 defconfig
-│       └── leds.dtsi                    # PWM LED（左右共用）
+├── boards/yangxing/planck/          # 板级定义（HWMv2 + zmk variant）
+│   ├── board.yml                    # Board 元数据（名称/厂商/SoC/变体）
+│   ├── Kconfig.planck_left          # 左手 Kconfig（select SOC/ZMK compat）
+│   ├── Kconfig.planck_right         # 右手 Kconfig
+│   ├── Kconfig.defconfig            # 板级 Kconfig 默认值
+│   ├── board.cmake                  # Flash runners
+│   ├── planck.dtsi                  # 共享硬件：SoC、矩阵、布局
+│   ├── planck_left_nrf52840_zmk.dts      # 左手 DTS
+│   ├── planck_right_nrf52840_zmk.dts     # 右手 DTS
+│   ├── planck_left_nrf52840_zmk_defconfig # 左手 defconfig
+│   ├── planck_right_nrf52840_zmk_defconfig # 右手 defconfig
+│   └── leds.dtsi                    # PWM LED（左右共用）
+├── zephyr/module.yml                # 使本仓库成为 Zephyr module
 ├── keymap-drawer/                   # 自动生成的键位图
 │   ├── planck.yaml                  # 解析后的 keymap YAML
 │   └── planck.svg                   # 键位布局 SVG
@@ -113,4 +119,3 @@ west build -s zmk/app -b planck_right//zmk -- -DZMK_CONFIG="$(pwd)/config"
 - 5 个 BT 配置文件（0–4），在 MEDIA 层切换
 - 点按选择配置文件，Shift+点按选择并清除
 - 发射功率 +8 dBm
-- 左手获取并代理右手电池电量

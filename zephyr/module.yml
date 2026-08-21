@@ -1,0 +1,5 @@
+name: zmk-keyboard-planck-split
+
+build:
+  settings:
+    board_root: .

@@ -4,7 +4,8 @@ build/
 # west workspace checkout
 modules/
 tools/
-zephyr/
+zephyr/*
+!zephyr/module.yml
 zmk/
 bootloader/
 
