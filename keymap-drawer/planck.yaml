@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: planck}
 layers:
-  base:
-  - {t: fun, h: toggle}
+  Base:
+  - ESC
   - Q
   - W
   - E
@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - {t: nav, h: toggle}
+  - BSPC
   - CAPS
   - {t: A, h: LGUI}
   - {t: S, h: LALT}
@@ -23,10 +23,10 @@ layers:
   - {t: J, h: LSHFT}
   - {t: K, h: LCTRL}
   - {t: L, h: LALT}
-  - {t: ;, h: LGUI}
+  - {t: '''', h: LGUI}
   - ''''
   - LSHFT
-  - Z
+  - {t: Z, h: Button}
   - {t: X, h: RALT}
   - C
   - V
@@ -35,40 +35,140 @@ layers:
   - M
   - ','
   - {t: ., h: RALT}
-  - /
+  - {t: /, h: Button}
   - RSHFT
   - LCTRL
   - LALT
   - LGUI
-  - {t: ESC, h: media}
-  - {t: SPACE, h: nav}
-  - {t: TAB, h: mouse}
-  - {t: RET, h: sym}
-  - {t: BSPC, h: num}
-  - {t: DEL, h: fun}
+  - {t: ESC, h: Media}
+  - {t: SPACE, h: Nav}
+  - {t: TAB, h: Mouse}
+  - {t: RET, h: Sym}
+  - {t: BSPC, h: Num}
+  - {t: DEL, h: Fun}
   - RGUI
   - RALT
   - RCTRL
-  nav:
-  - {t: base, h: toggle}
-  - '&sys_reset'
-  - ''
-  - ''
-  - ''
-  - ''
-  - AGAIN
-  - PASTE
-  - COPY
-  - CUT
+  Extra:
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BSPC
+  - CAPS
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: LSHFT}
+  - {t: K, h: LCTRL}
+  - {t: L, h: LALT}
+  - {t: '''', h: LGUI}
+  - ''''
+  - LSHFT
+  - {t: Z, h: Button}
+  - {t: X, h: RALT}
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - {t: ., h: RALT}
+  - {t: /, h: Button}
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - {t: ESC, h: Media}
+  - {t: SPACE, h: Nav}
+  - {t: TAB, h: Mouse}
+  - {t: RET, h: Sym}
+  - {t: BSPC, h: Num}
+  - {t: DEL, h: Fun}
+  - RGUI
+  - RALT
+  - RCTRL
+  Tap: [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, CAPS, A, S, D, F, G, H, J, K, L, '''', '''', LSHFT, Z, X, C, V, B, N, M, ',', ., /, RSHFT, LCTRL, LALT, LGUI, ESC,
+    SPACE, TAB, RET, BSPC, DEL, RGUI, RALT, RCTRL]
+  Button:
+  - ESC
   - UNDO
-  - {t: mouse, h: toggle}
+  - Sft+DEL
+  - Ctl+INS
+  - Sft+INS
+  - AGAIN
+  - AGAIN
+  - Sft+INS
+  - Ctl+INS
+  - Sft+DEL
+  - UNDO
+  - BSPC
   - CAPS
   - LGUI
   - LALT
   - LCTRL
   - LSHFT
   - ''
-  - '&caps_word'
+  - ''
+  - LSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - ''''
+  - LSHFT
+  - {t: UNDO, type: held}
+  - Sft+DEL
+  - Ctl+INS
+  - Sft+INS
+  - AGAIN
+  - AGAIN
+  - Sft+INS
+  - Ctl+INS
+  - Sft+DEL
+  - UNDO
+  - RSHFT
+  - LCTRL
+  - LALT
+  - LGUI
+  - '&mkp MB3'
+  - '&mkp MB1'
+  - '&mkp MB2'
+  - '&mkp MB2'
+  - '&mkp MB1'
+  - '&mkp MB3'
+  - RGUI
+  - RALT
+  - RCTRL
+  Nav:
+  - ESC
+  - '&bootloader'
+  - '&u_to_U_TAP'
+  - '&u_to_U_EXTRA'
+  - '&u_to_U_BASE'
+  - ''
+  - AGAIN
+  - Sft+INS
+  - Ctl+INS
+  - Sft+DEL
+  - UNDO
+  - BSPC
+  - CAPS
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - {t: '&caps_word', s: CAPS}
   - LEFT
   - DOWN
   - UP
@@ -77,8 +177,8 @@ layers:
   - LSHFT
   - ''
   - RALT
-  - ''
-  - ''
+  - '&u_to_U_NUM'
+  - '&u_to_U_NAV'
   - ''
   - INS
   - HOME
@@ -98,19 +198,19 @@ layers:
   - RGUI
   - RALT
   - RCTRL
-  mouse:
-  - {t: nav, h: toggle}
-  - '&sys_reset'
-  - ''
-  - ''
-  - ''
+  Mouse:
+  - ESC
+  - '&bootloader'
+  - '&u_to_U_TAP'
+  - '&u_to_U_EXTRA'
+  - '&u_to_U_BASE'
   - ''
   - AGAIN
-  - PASTE
-  - COPY
-  - CUT
+  - Sft+INS
+  - Ctl+INS
+  - Sft+DEL
   - UNDO
-  - {t: media, h: toggle}
+  - BSPC
   - CAPS
   - LGUI
   - LALT
@@ -126,8 +226,8 @@ layers:
   - LSHFT
   - ''
   - RALT
-  - ''
-  - ''
+  - '&u_to_U_SYM'
+  - '&u_to_U_MOUSE'
   - ''
   - ''
   - '&msc SCRL_LEFT'
@@ -141,25 +241,25 @@ layers:
   - ''
   - ''
   - {type: held}
-  - '&mkp RCLK'
-  - '&mkp LCLK'
-  - '&mkp MCLK'
+  - '&mkp MB2'
+  - '&mkp MB1'
+  - '&mkp MB3'
   - RGUI
   - RALT
   - RCTRL
-  media:
-  - {t: mouse, h: toggle}
-  - '&sys_reset'
-  - ''
-  - ''
-  - ''
+  Media:
+  - ESC
+  - '&bootloader'
+  - '&u_to_U_TAP'
+  - '&u_to_U_EXTRA'
+  - '&u_to_U_BASE'
   - ''
   - RGB TOG
   - RGB EFF
   - RGB HUI
   - RGB SAI
   - RGB BRI
-  - {t: num, h: toggle}
+  - BSPC
   - CAPS
   - LGUI
   - LALT
@@ -175,10 +275,10 @@ layers:
   - LSHFT
   - ''
   - RALT
+  - '&u_to_U_FUN'
+  - '&u_to_U_MEDIA'
   - ''
-  - ''
-  - ''
-  - OUT TOG
+  - {t: OUT TOG, s: OUT USB}
   - BT 0
   - BT 1
   - BT 2
@@ -196,19 +296,19 @@ layers:
   - RGUI
   - RALT
   - RCTRL
-  num:
-  - {t: media, h: toggle}
+  Num:
+  - ESC
   - '['
   - '7'
   - '8'
   - '9'
   - ']'
   - ''
-  - ''
-  - ''
-  - ''
-  - '&sys_reset'
-  - {t: sym, h: toggle}
+  - '&u_to_U_BASE'
+  - '&u_to_U_EXTRA'
+  - '&u_to_U_TAP'
+  - '&bootloader'
+  - BSPC
   - CAPS
   - ;
   - '4'
@@ -228,8 +328,8 @@ layers:
   - '3'
   - \
   - ''
-  - ''
-  - ''
+  - '&u_to_U_NUM'
+  - '&u_to_U_NAV'
   - RALT
   - ''
   - RSHFT
@@ -245,19 +345,19 @@ layers:
   - RGUI
   - RALT
   - RCTRL
-  sym:
-  - {t: num, h: toggle}
+  Sym:
+  - ESC
   - '{'
   - '&'
   - '*'
   - (
   - '}'
   - ''
-  - ''
-  - ''
-  - ''
-  - '&sys_reset'
-  - {t: fun, h: toggle}
+  - '&u_to_U_BASE'
+  - '&u_to_U_EXTRA'
+  - '&u_to_U_TAP'
+  - '&bootloader'
+  - BSPC
   - CAPS
   - ':'
   - $
@@ -277,8 +377,8 @@ layers:
   - '#'
   - '|'
   - ''
-  - ''
-  - ''
+  - '&u_to_U_SYM'
+  - '&u_to_U_MOUSE'
   - RALT
   - ''
   - RSHFT
@@ -294,19 +394,19 @@ layers:
   - RGUI
   - RALT
   - RCTRL
-  fun:
-  - {t: sym, h: toggle}
+  Fun:
+  - ESC
   - F12
   - F7
   - F8
   - F9
   - PSCRN
   - ''
-  - ''
-  - ''
-  - ''
-  - '&sys_reset'
-  - {t: base, h: toggle}
+  - '&u_to_U_BASE'
+  - '&u_to_U_EXTRA'
+  - '&u_to_U_TAP'
+  - '&bootloader'
+  - BSPC
   - CAPS
   - F11
   - F4
@@ -326,8 +426,8 @@ layers:
   - F3
   - PAUSE BREAK
   - ''
-  - ''
-  - ''
+  - '&u_to_U_FUN'
+  - '&u_to_U_MEDIA'
   - RALT
   - ''
   - RSHFT
@@ -335,7 +435,7 @@ layers:
   - LALT
   - LGUI
   - APP
-  - SPC
+  - SPACE
   - TAB
   - ''
   - ''
