@@ -53,35 +53,35 @@ layers:
   - ESC
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
   - BSPC
   - CAPS
   - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHFT}
+  - {t: R, h: LALT}
+  - {t: S, h: LCTRL}
+  - {t: T, h: LSHFT}
   - G
-  - H
-  - {t: J, h: LSHFT}
-  - {t: K, h: LCTRL}
-  - {t: L, h: LALT}
-  - {t: '''', h: LGUI}
+  - M
+  - {t: N, h: LSHFT}
+  - {t: E, h: LCTRL}
+  - {t: I, h: LALT}
+  - {t: O, h: LGUI}
   - ''''
   - LSHFT
   - {t: Z, h: Button}
   - {t: X, h: RALT}
   - C
+  - D
   - V
-  - B
-  - N
-  - M
+  - K
+  - H
   - ','
   - {t: ., h: RALT}
   - {t: /, h: Button}
@@ -102,16 +102,16 @@ layers:
     SPACE, TAB, RET, BSPC, DEL, RGUI, RALT, RCTRL]
   Button:
   - ESC
-  - UNDO
-  - Sft+DEL
-  - Ctl+INS
-  - Sft+INS
-  - AGAIN
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+Y
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
   - BSPC
   - CAPS
   - LGUI
@@ -126,16 +126,16 @@ layers:
   - LGUI
   - ''''
   - LSHFT
-  - {t: UNDO, type: held}
-  - Sft+DEL
-  - Ctl+INS
-  - Sft+INS
-  - AGAIN
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
+  - {t: Ctl+Z, type: held}
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+Y
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
   - RSHFT
   - LCTRL
   - LALT
@@ -151,16 +151,16 @@ layers:
   - RCTRL
   Nav:
   - ESC
-  - '&bootloader'
+  - '&soft_off'
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
   - ''
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
   - BSPC
   - CAPS
   - LGUI
@@ -200,16 +200,16 @@ layers:
   - RCTRL
   Mouse:
   - ESC
-  - '&bootloader'
+  - '&soft_off'
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
   - ''
-  - AGAIN
-  - Sft+INS
-  - Ctl+INS
-  - Sft+DEL
-  - UNDO
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
   - BSPC
   - CAPS
   - LGUI
@@ -249,7 +249,7 @@ layers:
   - RCTRL
   Media:
   - ESC
-  - '&bootloader'
+  - '&soft_off'
   - '&u_to_U_TAP'
   - '&u_to_U_EXTRA'
   - '&u_to_U_BASE'
@@ -307,7 +307,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - '&bootloader'
+  - '&soft_off'
   - BSPC
   - CAPS
   - ;
@@ -356,7 +356,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - '&bootloader'
+  - '&soft_off'
   - BSPC
   - CAPS
   - ':'
@@ -405,7 +405,7 @@ layers:
   - '&u_to_U_BASE'
   - '&u_to_U_EXTRA'
   - '&u_to_U_TAP'
-  - '&bootloader'
+  - '&soft_off'
   - BSPC
   - CAPS
   - F11
