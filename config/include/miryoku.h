@@ -22,11 +22,11 @@
 #define U_WH_R &msc SCRL_RIGHT
 #define U_WH_U &msc SCRL_UP
 
-#define U_RDO &kp K_AGAIN
-#define U_PST &kp LS(INS)
-#define U_CPY &kp LC(INS)
-#define U_CUT &kp LS(DEL)
-#define U_UND &kp K_UNDO
+#define U_RDO &kp LC(Y)
+#define U_PST &kp LC(V)
+#define U_CPY &kp LC(C)
+#define U_CUT &kp LC(X)
+#define U_UND &kp LC(Z)
 
 #define U_RGB_TOG &rgb_ug RGB_TOG
 #define U_RGB_EFF &rgb_ug RGB_EFF
@@ -35,4 +35,4 @@
 #define U_RGB_BRI &rgb_ug RGB_BRI
 #define U_EP_TOG &ext_power EP_TOG
 
-#define U_BOOT &bootloader
+#define U_BOOT &soft_off

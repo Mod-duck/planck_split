@@ -35,7 +35,7 @@
 | # | Layer | 触发 | 说明 |
 |---|-------|------|------|
 | 0 | BASE | 默认 | QWERTY + home row mods |
-| 1 | EXTRA | 双击 `&u_to_U_EXTRA` | 同 BASE 的 QWERTY 备份层 |
+| 1 | EXTRA | 双击 `&u_to_U_EXTRA` | Colemak-DH 字母备份层 |
 | 2 | TAP | 双击 `&u_to_U_TAP` | 无双功能键的纯打字层 |
 | 3 | BUTTON | 按住 `Z` 或 `/` | 鼠标按键、剪贴板、修饰键 |
 | 4 | NAV | Hold `Space` | 方向键、剪贴板、caps word |
@@ -51,6 +51,8 @@
 - **拇指键**（BASE）：左 `Esc`/`Space`/`Tab`（按 → MEDIA/NAV/MOUSE），右 `Enter`/`Bksp`/`Del`（按 → SYM/NUM/FUN）
 - **顶排两角**：`Esc` / `Backspace`（所有层一致）
 - **返回 BASE**：在覆盖层双击 `&u_to_U_BASE`
+- **软关机**：NAV/MOUSE/MEDIA 层 `pos1`、NUM/SYM/FUN 层 `pos10` 为 `&soft_off`；开机按一下实体 reset（双击进 UF2 刷写）
+- **剪贴板**：`Ctrl+C/X/V/Z/Y`（Linux/Windows 通用）
 - **Caps Word**：NAV 层 `Caps Word`（Shift+按 = Caps Lock）
 - **BT 切换**：MEDIA 层 `BT 0–3`；Shift+按 = 选择并清除配对
 
@@ -124,7 +126,6 @@ west build -s zmk/app -d build/right -b planck_right//zmk -- \
 │   ├── planck.keymap                # 键位映射（Miryoku 移植）
 │   ├── planck.conf                  # 左右共享用户配置
 │   ├── planck_left.conf             # 左半应用配置（central/USB/HID/pointing）
-│   ├── planck.json                  # 布局定义（keymap-drawer 用）
 │   ├── include/
 │   │   ├── layers.h                 # 层编号
 │   │   ├── miryoku.h                # Miryoku 键位宏（U_*）

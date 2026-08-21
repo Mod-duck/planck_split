@@ -54,9 +54,9 @@
         extra_layer {
             display-name = "Extra";
             bindings = <
-  &kp ESC   &kp Q          &kp W        &kp E           &kp R           &kp T           &kp Y         &kp U          &kp I         &kp O          &kp P              &kp BSPC
-  &kp CAPS  U_MT(LGUI,A)   U_MT(LALT,S) U_MT(LCTRL,D)   U_MT(LSHFT,F)   &kp G           &kp H         U_MT(LSHFT,J)  U_MT(LCTRL,K) U_MT(LALT,L)   U_MT(LGUI,SQT)     &kp SQT
-  &kp LSHFT U_LT(BUTTON,Z) U_MT(RALT,X) &kp C           &kp V           &kp B           &kp N         &kp M          &kp COMMA     U_MT(RALT,DOT) U_LT(BUTTON,SLASH) &kp RSHFT
+  &kp ESC   &kp Q          &kp W        &kp F           &kp P           &kp B           &kp J         &kp L          &kp U         &kp Y          &kp SQT            &kp BSPC
+  &kp CAPS  U_MT(LGUI,A)   U_MT(LALT,R) U_MT(LCTRL,S)   U_MT(LSHFT,T)   &kp G           &kp M         U_MT(LSHFT,N)  U_MT(LCTRL,E) U_MT(LALT,I)   U_MT(LGUI,O)       &kp SQT
+  &kp LSHFT U_LT(BUTTON,Z) U_MT(RALT,X) &kp C           &kp D           &kp V           &kp K         &kp H          &kp COMMA     U_MT(RALT,DOT) U_LT(BUTTON,SLASH) &kp RSHFT
   &kp LCTRL &kp LALT       &kp LGUI     U_LT(MEDIA,ESC) U_LT(NAV,SPACE) U_LT(MOUSE,TAB) U_LT(SYM,RET) U_LT(NUM,BSPC) U_LT(FUN,DEL) &kp RGUI       &kp RALT           &kp RCTRL
             >;
         };

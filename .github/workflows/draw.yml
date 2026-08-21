@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - config/planck.keymap
-      - config/planck.json
       - config/include/**
       - keymap_drawer.config.yaml
       - .github/workflows/draw.yml
