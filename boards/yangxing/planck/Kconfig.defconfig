@@ -22,6 +22,9 @@ config ZMK_SPLIT
 config SETTINGS
     default y
 
+config FLASH
+    default y
+
 config NVS
     default y
 
