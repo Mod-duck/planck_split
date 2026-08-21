@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: MIT
+
+config PLANCK_BATTERY_LEDS
+    bool "Planck battery level LEDs"
+    default y
+    depends on ZMK_BATTERY_REPORTING
+    depends on LED
+    help
+      Display this half's local battery state of charge using its three
+      PWM LEDs as a continuous three-segment battery bar.

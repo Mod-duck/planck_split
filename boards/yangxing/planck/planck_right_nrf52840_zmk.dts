@@ -3,10 +3,10 @@
 #include "leds.dtsi"
 #include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
 
-
 &default_transform {
 	col-offset = <24>;
 };
+
 &reg0 {
     status = "okay";
 };

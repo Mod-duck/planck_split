@@ -104,6 +104,10 @@ west build -s zmk/app -d build/right -b planck_right//zmk -- -DZMK_CONFIG="$REPO
 │   ├── planck_right_nrf52840_zmk_defconfig # 右手 defconfig
 │   └── leds.dtsi                    # PWM LED（左右共用）
 ├── zephyr/module.yml                # 使本仓库成为 Zephyr module
+├── CMakeLists.txt                    # 电量 LED module source
+├── Kconfig                           # 电量 LED module configuration
+├── src/
+│   └── battery_leds.c                # 三段本地电量指示
 ├── keymap-drawer/                   # 自动生成的键位图
 │   ├── planck.yaml                  # 解析后的 keymap YAML
 │   └── planck.svg                   # 键位布局 SVG
