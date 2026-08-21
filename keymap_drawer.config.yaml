@@ -7,14 +7,14 @@ draw_config:
 
 parse_config:
   # 自定义 hold-tap behavior 映射
-  # um = mod hold-tap（类似 &mt）：hold 修饰键, tap 普通键
-  # ul = layer hold-tap（类似 &lt）：hold 切层, tap 普通键
+  # u_mt = mod hold-tap（类似 &mt）：hold 修饰键, tap 普通键
+  # u_lt = layer hold-tap（类似 &lt）：hold 切层, tap 普通键
   zmk_additional_behaviors:
-    um:
+    u_mt:
       type: hold-tap
       hold: [kp]
       tap: [kp]
-    ul:
+    u_lt:
       type: hold-tap
       hold: [mo]
       tap: [kp]

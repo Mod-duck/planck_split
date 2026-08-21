@@ -4,9 +4,31 @@
 
 #define U_TAPPING_TERM 200
 
+#define MIRYOKU_DOUBLE_TAP_GUARD(NAME, BINDING)                                                    \
+    / {                                                                                            \
+        behaviors {                                                                                \
+            NAME: NAME {                                                                           \
+                compatible = "zmk,behavior-tap-dance";                                             \
+                #binding-cells = <0>;                                                              \
+                tapping-term-ms = <U_TAPPING_TERM>;                                                \
+                bindings = <&none>, <BINDING>;                                                     \
+            };                                                                                     \
+        };                                                                                         \
+    };
+
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_BASE, &to BASE)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_EXTRA, &to EXTRA)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_TAP, &to TAP)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_NAV, &to NAV)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_MOUSE, &to MOUSE)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_MEDIA, &to MEDIA)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_NUM, &to NUM)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_SYM, &to SYM)
+MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_FUN, &to FUN)
+
 / {
     behaviors {
-        um: um {
+        u_mt: u_mt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <U_TAPPING_TERM>;
@@ -14,7 +36,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        ul: ul {
+        u_lt: u_lt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <U_TAPPING_TERM>;
